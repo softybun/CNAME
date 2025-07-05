@@ -1,0 +1,123 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Video Background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(1); /* Adjust brightness here */
+}
+
+/* Overlay to dim video */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust for dimming */
+  z-index: -1;
+}
+
+/* Main layout */
+body {
+  height: 100vh;
+  font-family: monospace, monospace;
+  color: #f5f5f5;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  padding: 1rem;
+}
+
+/* Profile Picture */
+#profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4af;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(74, 170, 255, 0.7);
+}
+
+.profile-container {
+  perspective: 800px;
+}
+
+#profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4af;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(74, 170, 255, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+
+/* Headline */
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.3rem;
+}
+
+/* Subtitle */
+p {
+  color: #aaa;
+  font-size: 1.25rem;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+}
+
+/* Social / Contact Links */
+.links a {
+  display: inline-block;
+  color: #4af;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: bold;
+  font-size: 1.15rem;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+.links a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #4af;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .links a {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+  #profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+}
